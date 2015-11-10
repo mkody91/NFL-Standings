@@ -9,8 +9,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Landing Page - Start Bootstrap Theme</title>
-
+    <title>NFL Standings</title>
+	
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -48,10 +48,7 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="#AFC">AFC</a>
-                    </li>
-                    <li>
-                        <a href="#NFC">NFC</a>
+                        <a id="previous">Back</a>
                     </li>
                 </ul>
             </div>
@@ -72,23 +69,44 @@
                         <h1>NFL Division Standings</h1>
                         <hr class="intro-divider">
                         <ul class="list-inline intro-social-buttons">
-                            <li>
-                                <button>AFC</button>
+							<li>
+                                <button id="afc" class="mainButton">AFC</button>
                             </li>
                             <li>
-                                <button>NFC</button>
+                                <button id="nfc" class="mainButton">NFC</button>
                             </li>
-
-
-
+							<li>
+                                <button id="afc" class="subButton">AFC North</button>
+                            </li>
+							<li>
+                                <button id="afc" class="subButton">AFC East</button>
+                            </li>
+							<li>
+                                <button id="afc" class="subButton">AFC South</button>
+                            </li>
+							<li>
+                                <button id="afc" class="subButton">AFC West</button>
+                            </li>
+                   
+							<li>
+                                <button id="nfc" class="subButton">NFC North</button>
+                            </li>
+							<li>
+                                <button id="nfc" class="subButton">NFC East</button>
+                            </li>
+							<li>
+                                <button id="nfc" class="subButton">NFC South</button>
+                            </li>
+							<li>
+                                <button id="nfc" class="subButton">NFC West</button>
+                            </li>
+							
                         </ul>
                     </div>
                 </div>
             </div>
-
         </div>
         <!-- /.container -->
-
     </div>
 
     <!-- Footer -->
@@ -124,7 +142,7 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
-
+	<script src="js/main.js"></script>
 </body>
 
 </html>
