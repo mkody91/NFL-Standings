@@ -1,38 +1,14 @@
-
-
-
-
-
-
 $(document).ready(function(){
 
 		var jsonData;
-
+    // connects to Json data file
 		$.getJSON("data/data.json", function(data) {
 			jsonData = data;
 		});
 
-/*
-    $.ajax({
-        url: "https://api.fantasydata.net/nfl/v2/JSON/Standings/2015?subscription-key=3c48652a252840d09ffa2abf78a2605d",
-        type: "GET"
-    })
-    .done(function(data) {
-        alert("success");
-				jsonData = data;
-				alert(data[0].Name);
-
-    })
-    .fail(function(data) {
-        alert("error");
-				alert(data.Name);
-    });
-
-*/
-
 		//Starts by hiding the sub-buttons which are the individual divisions
 		$(".subButton").hide();
-		//function for what happens when you click on the afc main button
+		//function for what happens when you click on the main button
 		$("#afcMain").click(function(){
 			$(".mainButton").hide();
 			$(".afc.subButton").show();
@@ -43,7 +19,8 @@ $(document).ready(function(){
 			$(".nfc.subButton").show();
 		});
 
-
+		// after clicking one of the multiple division buttons these functions fire off.
+		// this hides the buttons and shows the division data.
 		$("#afcNorth").click(function(){
 			$(".subButton").hide();
 			$("#data").html(jsonData[4].Name + ", " + jsonData[4].Wins + " - " + jsonData[4].Losses + "<br />"
@@ -101,6 +78,7 @@ $(document).ready(function(){
 										+ jsonData[30].Name + ", " + jsonData[30].Wins + " - " + jsonData[30].Losses + "<br />"
 										+ jsonData[31].Name + ", " + jsonData[31].Wins + " - " + jsonData[31].Losses).show();
 		});
+		// when clicking the back button this sets up the main menu
 		$("#previous").click(function(){
 			if($(".subButton:hidden" && ".mainButton:hidden")){
 				$(".subButton").show();
